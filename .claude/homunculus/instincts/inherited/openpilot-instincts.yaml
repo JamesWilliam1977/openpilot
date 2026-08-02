@@ -1,0 +1,377 @@
+# Instincts generated from https://github.com/JamesWilliam1977/openpilot
+# Generated: 2026-08-02T06:41:25.636Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: openpilot-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/openpilot
+---
+
+# Openpilot Commit Length
+
+## Action
+
+Keep commit messages concise (~35 characters)
+
+## Evidence
+
+- Average commit message length: 35 chars
+- Based on 8 commits
+
+---
+id: openpilot-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/openpilot
+---
+
+# Openpilot Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: openpilot-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/openpilot
+---
+
+# Openpilot Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: openpilot-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/openpilot
+---
+
+# Openpilot Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: openpilot-workflow-athenad-feature-or-fix-workflow
+trigger: "when doing athenad feature or fix workflow"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/openpilot
+---
+
+# Openpilot Workflow Athenad Feature Or Fix Workflow
+
+## Action
+
+Follow the athenad-feature-or-fix-workflow workflow:
+1. Edit or extend openpilot/system/athena/athenad.py to implement the feature or fix.
+2. If applicable, update or add tests in openpilot/system/athena/tests/test_athenad.py.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: openpilot/system/athena/athenad.py, openpilot/system/athena/tests/test_athenad.py
+
+---
+id: openpilot-workflow-loggerd-encoder-pipeline-update
+trigger: "when doing loggerd encoder pipeline update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/openpilot
+---
+
+# Openpilot Workflow Loggerd Encoder Pipeline Update
+
+## Action
+
+Follow the loggerd-encoder-pipeline-update workflow:
+1. Edit or add C++ source/header files in openpilot/system/loggerd/encoder/ (e.g., v4l_decoder.cc, v4l_decoder.h, v4l_encoder.cc, v4l_encoder.h).
+2. Edit or add related files in openpilot/system/loggerd/ (e.g., clip_encoder.cc, clip_encoder.h, encoderd.cc, video_writer.cc, video_writer.h).
+3. Update build scripts (SConscript) as needed.
+4. If applicable, update tools/replay/ files for replay support.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: openpilot/system/loggerd/encoder/v4l_decoder.cc, openpilot/system/loggerd/encoder/v4l_decoder.h, openpilot/system/loggerd/encoder/v4l_encoder.cc
+
+---
+id: openpilot-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in repo file names
+- Naming conventions: files: snake_case
+
+---
+id: openpilot-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codebase
+- Naming conventions: functions: camelCase
+
+---
+id: openpilot-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codebase
+- Naming conventions: classes: PascalCase
+
+---
+id: openpilot-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codebase
+- Naming conventions: constants: SCREAMING_SNAKE_CASE
+
+---
+id: openpilot-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codebase
+- importStyle: relative
+
+---
+id: openpilot-instinct-export-style
+trigger: "When exporting functions or classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codebase
+- exportStyle: named
+
+---
+id: openpilot-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Test Location
+
+## Action
+
+Place tests in mixed locations, often near the code they test
+
+## Evidence
+
+- testLocation: mixed
+- Example: openpilot/system/athena/tests/test_athenad.py
+
+---
+id: openpilot-instinct-test-update-athenad
+trigger: "When modifying openpilot/system/athena/athenad.py"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Test Update Athenad
+
+## Action
+
+Update or add corresponding tests in openpilot/system/athena/tests/test_athenad.py
+
+## Evidence
+
+- athenad-feature-or-fix-workflow
+- Example commit sequence
+
+---
+id: openpilot-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Commit Prefix
+
+## Action
+
+Prefix the message with the relevant subsystem (e.g., loggerd:, clips:, encoderd:, athena:)
+
+## Evidence
+
+- Pattern in commit messages
+- Examples: loggerd: move qcom decoder...
+- clips: add getClipChunk...
+
+---
+id: openpilot-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (average ~35 characters)
+
+## Evidence
+
+- commits.averageLength: 35
+- Examples: short commit messages
+
+---
+id: openpilot-instinct-athenad-feature-or-fix
+trigger: "When adding a new feature or fixing a bug in athenad.py"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Athenad Feature Or Fix
+
+## Action
+
+Edit or extend openpilot/system/athena/athenad.py and, if applicable, update or add tests in openpilot/system/athena/tests/test_athenad.py
+
+## Evidence
+
+- athenad-feature-or-fix-workflow
+- Example commit sequence
+- Files involved
+
+---
+id: openpilot-instinct-loggerd-encoder-update
+trigger: "When adding or refactoring video encoding/decoding/transcoding functionality in loggerd"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/openpilot
+---
+
+# Openpilot Instinct Loggerd Encoder Update
+
+## Action
+
+Edit or add C++ source/header files in openpilot/system/loggerd/encoder/, update related files in openpilot/system/loggerd/, update build scripts, and if applicable, update tools/replay/ files
+
+## Evidence
+
+- loggerd-encoder-pipeline-update workflow
+- Example commit sequence
+- Files involved
+
